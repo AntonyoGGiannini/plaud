@@ -7,7 +7,7 @@ from mcp.server.fastmcp import FastMCP
 PLAUD_TOKEN = os.environ.get("PLAUD_TOKEN", "")
 PLAUD_API = "https://api.plaud.ai"
 
-mcp = FastMCP("plaud")
+mcp = FastMCP("plaud", host="0.0.0.0", stateless_http=True)
 
 def headers():
     return {
